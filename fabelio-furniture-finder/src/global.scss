@@ -1,0 +1,123 @@
+body{
+    max-width: 1366px;
+    font-size: 16px;
+    margin: auto !important;
+}
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+.dropdown-menu label {
+    display: block;
+  }
+.top-contents{
+    background-color: #106CC8;
+    padding: 20px 30px;
+
+    input[type="search"] {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        border-radius: 0;
+        color: #fff !important;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 100%;
+        margin-bottom: 0;
+        padding: 3px 0;
+        transition: all 0.5s ease 0s;
+        max-width: 300px;
+        width: calc(100% - 15px);
+
+        &:focus {
+            background-color: transparent;
+            color: #fff;
+            cursor: auto;
+            padding: 3px 0;
+        }
+        &::placeholder{
+            color: #fff;
+        }
+    }
+
+    &:hover input[type="search"] {
+        background-color: transparent;
+        color: #fff;
+        cursor: auto;
+        padding: 3px 0;
+    }
+
+    .filter-option{
+        margin-top: 16px;
+        display: flex;
+        button, .option-select{
+            width: 100%;
+            border: none;
+        }
+
+        select{
+            padding: 8px 8px 5px 8px;
+            background-color: #FFF;
+            box-shadow: 0 1px 1px 1px rgba(0,0,0,0.08);
+            width: 100%;
+            border: 3px solid #fff;
+            border-radius: 2px;
+            font-size: 14px;
+        }
+    }
+}
+.contents{
+    padding: 20px;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    @media (min-width: 576px) {
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    @media (min-width:480px) and (max-width: 575px) {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+    }
+    @media screen and (max-width: 479px) {
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: auto;
+    }
+}
+
+.box-item{
+    list-style-type: none;
+    box-shadow: 0 0px 4px 0px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    
+    &_head{
+        display: flex;
+        justify-content: space-between;
+
+        span:first-child{
+            font-weight: bold;
+            font-size: 18px;
+        }
+        span:nth-child(2){
+            color: #fc6000;
+        }
+    }
+
+    .item-category, .item-delivery{
+        color: #106CC8;
+    }
+
+    .item-delivery{
+        font-weight: bold;
+        text-decoration: underline;
+        text-align: right;
+    }
+}
