@@ -78,9 +78,6 @@ class Furnitures extends Component {
                         <div className="filter-option">
                             <div className="option-select"><ReactMultiSelectCheckboxes options={categories} /></div>
                             <div className="option-select" style={{marginLeft: '10px'}}>
-                                {/* <select id="select">
-                                    <option value="default">Delivery Time</option>
-                                </select> */}
                                 <select id="select">
                                     {
                                         post !== undefined ?
